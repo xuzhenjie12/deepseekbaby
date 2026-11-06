@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "deepseekbaby",
+    "description": "A bottom-right button that opens a standalone conversation window with a node tree: create, switch, and go back between branches, and discard a turn from later context."
+  }
+}

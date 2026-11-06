@@ -1,0 +1,4 @@
+# deepseekbaby bundle patch: inserts the chat app into a profile.
+- insert:
+    - id: node-chat
+      name: 'deepseekbaby'

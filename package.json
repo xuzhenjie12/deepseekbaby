@@ -1,0 +1,87 @@
+{
+  "name": "deepseekbaby",
+  "version": "2.6.0",
+  "description": "deepseekbaby：节点式会话小程序，带工作区隔离、文件/图片上传、联网搜索与跨轮缓存友好的删末尾。",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "client.js",
+    "panel.html",
+    "panel-markdown.js",
+    "test",
+    "install.ps1",
+    "install.sh",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node test/release.test.mjs && node test/compat.test.mjs && node test/search-auth.test.mjs && node test/handler.test.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-client-locale": "*",
+    "@deepseek-ai/dsh-client-ui-layout": "*"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-client-locale": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-client-ui-layout": {
+      "optional": true
+    }
+  },
+  "license": "MIT",
+  "author": "earthrian",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/earthrian/deepseekbaby.git"
+  },
+  "homepage": "https://github.com/earthrian/deepseekbaby#readme",
+  "bugs": {
+    "url": "https://github.com/earthrian/deepseekbaby/issues"
+  },
+  "keywords": [
+    "dsh",
+    "plugin",
+    "chat",
+    "deepseek",
+    "node-tree"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compat": {
+      "testedRange": ">=1.2 <2",
+      "seams": [
+        "webServer",
+        "llm",
+        "agentDefaultModel",
+        "workspaceRegistry",
+        "workingDirectory",
+        "sessionQuery",
+        "attachments",
+        "web",
+        "deepseekAccount",
+        "pluginManager"
+      ]
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  }
+}
