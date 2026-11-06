@@ -43,11 +43,11 @@
   "author": "earthrian",
   "repository": {
     "type": "git",
-    "url": "https://github.com/earthrian/deepseekbaby.git"
+    "url": "https://github.com/xuzhenjie12/deepseekbaby.git"
   },
-  "homepage": "https://github.com/earthrian/deepseekbaby#readme",
+  "homepage": "https://github.com/xuzhenjie12/deepseekbaby#readme",
   "bugs": {
-    "url": "https://github.com/earthrian/deepseekbaby/issues"
+    "url": "https://github.com/xuzhenjie12/deepseekbaby/issues"
   },
   "keywords": [
     "dsh",
